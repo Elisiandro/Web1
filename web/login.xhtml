@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>CineWeb</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/login.css" rel="stylesheet" />
+    </h:head>
+    <h:body>        
+        <div class="container">
+            <h:form class="form-signin">            
+                <h2 class="form-signin-heading">Login - CineWeb</h2>
+                <br /><br />                
+                <h:outputLabel value="Usuario: " for="idUsuario" />
+                <h:inputText value="#{usuarioMB.usuario.user}" id="idUser" class="form-control" />
+                <h:outputLabel value="Senha: " for="idSenha"  />
+                <h:inputText value="#{usuarioMB.usuario.pass}" id="idPass" class="form-control" />
+                
+                <h:commandButton value="Entrar" action="#{usuarioMB.verificaLogin()}"  class="btn btn-lg btn-primary btn-block" />
+                <h:messages id="mensagemLogin" errorStyle="color:red;font-size:x-large" showDetail="true"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
